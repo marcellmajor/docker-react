@@ -2,7 +2,7 @@ sudo: required
 services:
   - docker
 
-before-install:
+before_install:
   - gem update bundler
   - docker build -t marcellm/docker-react -f Dockerfile.dev .
 
