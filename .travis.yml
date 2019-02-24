@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before-install:
+  - docker build -t marcell0m/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run marcell0m/docker-react npm run test -- --coverage
